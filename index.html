@@ -2,75 +2,94 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <title>Fachri Website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fachri | Personal Website</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <section class="hero">
-        <div class="hero-content">
-            <h1>Welcome My Website</h1>
-            <h2>I'm <span>Fachri</span></h2>
-            <img src="foto.jpg" class="profile-img">
+        <div class="hero-content" data-aos="zoom-in">
+            <div class="profile-img-container">
+                <img src="foto.jpg" alt="Fachri" class="profile-img"> </div>
+            <h1>Welcome to My Website</h1>
+            <p class="name-tag">I am <span>Fachri</span></p>
+            <div class="scroll-indicator">↓ Scroll Down</div>
+        </div>
+    </section>
 
-            <div class="hero-buttons">
-                <a href="#profil">My Profil</a>
-                <a href="#hobi">My Hobie</a>
+    <section class="nav-section">
+        <div class="container">
+            <div class="card-grid">
+                <a href="#profile" class="nav-card" data-aos="fade-right">
+                    <h3>My Profile</h3>
+                </a>
+                <a href="#hobbies" class="nav-card" data-aos="fade-left">
+                    <h3>My Hobbies</h3>
+                </a>
             </div>
         </div>
     </section>
 
-    <section id="profil" class="section">
-        <h2>My Profil</h2>
-
-        <div class="floating-grid">
-
-            <div class="float-card">Nama: Fachri</div>
-            <div class="float-card">Umur: 16 Tahun</div>
-            <div class="float-card">Jurusan: SIJA</div>
-            <div class="float-card">Game Favorit: Mobile Legends 🎮</div>
-            <div class="float-card">Hobi: Bersepeda 🚴</div>
-            <div class="float-card">Hobi: Gaming 🕹</div>
-            <div class="float-card">Makanan Favorit: Steak 🥩</div>
-            <div class="float-card">Minuman Favorit: Air Putih 💧</div>
-            <div class="float-card">Cita-cita: Sukses di Dunia IT 🚀</div>
-            <div class="float-card">Keahlian: Jaringan Komputer 🌐</div>
-            <div class="float-card">Kepribadian: Santai & Fokus 😎</div>
-
+    <section id="profile" class="section profile-bg">
+        <div class="container" data-aos="fade-up">
+            <h2 class="section-title">About Me</h2>
+            <div class="glass-card">
+                <p>Halo! Nama saya <strong>Fachri</strong>. Saat ini saya berusia <strong>16 tahun</strong> dan sedang menempuh pendidikan di jurusan <strong>SIJA</strong> (Sistem Informatika, Jaringan, dan Aplikasi).</p>
+                <div class="details-grid">
+                    <div class="detail-item"><strong>Game:</strong> Mobile Legends</div>
+                    <div class="detail-item"><strong>Makanan:</strong> Steak</div>
+                    <div class="detail-item"><strong>Minuman:</strong> Air Putih</div>
+                    <div class="detail-item"><strong>Cita-cita:</strong> Network Engineer / Developer</div>
+                    <div class="detail-item"><strong>Lokasi:</strong> Indonesia</div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section id="hobi" class="section">
-        <h2>My Hobie</h2>
-
-        <div class="hobi-container">
-
-            <div class="hobi-card">
-                <img src="https://images.unsplash.com/photo-1507035895480-2b3156c31fc8">
-                <p>Bersepeda 🚴</p>
+    <section id="hobbies" class="section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-down">My Passion & Hobbies</h2>
+            <div class="hobby-grid">
+                <div class="hobby-card" data-aos="flip-left">
+                    <img src="https://images.unsplash.com/photo-1541625602330-2277a4c46182?q=80&w=400" alt="Cycling">
+                    <div class="hobby-info">
+                        <h3>Bersepeda</h3>
+                        <p>Menjelajahi jalanan dan mencari udara segar.</p>
+                    </div>
+                </div>
+                <div class="hobby-card" data-aos="flip-left" data-aos-delay="100">
+                    <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=400" alt="Gaming">
+                    <div class="hobby-info">
+                        <h3>Gaming</h3>
+                        <p>Push rank Mobile Legends dan mengasah strategi.</p>
+                    </div>
+                </div>
+                <div class="hobby-card" data-aos="flip-left" data-aos-delay="200">
+                    <img src="https://images.unsplash.com/photo-1530549387074-d56223405202?q=80&w=400" alt="Swimming">
+                    <div class="hobby-info">
+                        <h3>Berenang</h3>
+                        <p>Olahraga terbaik untuk menjaga stamina tubuh.</p>
+                    </div>
+                </div>
+                <div class="hobby-card" data-aos="flip-left" data-aos-delay="300">
+                    <img src="https://images.unsplash.com/photo-1529699211952-734e80c4d42b?q=80&w=400" alt="Chess">
+                    <div class="hobby-info">
+                        <h3>Main Catur</h3>
+                        <p>Mengasah otak dengan taktik yang tajam.</p>
+                    </div>
+                </div>
             </div>
-
-            <div class="hobi-card">
-                <img src="https://images.unsplash.com/photo-1605901309584-818e25960a8f">
-                <p>Main Game 🎮</p>
-            </div>
-
-            <div class="hobi-card">
-                <img src="https://images.unsplash.com/photo-1560090995-01632a28895b">
-                <p>Berenang 🏊</p>
-            </div>
-
-            <div class="hobi-card">
-                <img src="https://images.unsplash.com/photo-1586165368502-1bad197a6461">
-                <p>Main Catur ♟</p>
-            </div>
-
         </div>
     </section>
 
     <footer>
-        <p>© 2026 Fachri Creative Website</p>
+        <p>&copy; 2024 Fachri SIJA. Made with Passion.</p>
     </footer>
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
