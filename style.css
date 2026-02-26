@@ -5,128 +5,141 @@
     font-family: 'Segoe UI', sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;   /* INI KUNCI SLIDE */
+}
+
 body {
     background: linear-gradient(135deg, #1e90ff, #6a0dad);
     color: white;
+    overflow-y: scroll;
+}
+
+/* Semua section jadi fullscreen */
+section {
+    height: 100vh;
+    scroll-snap-align: start;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px;
+}
+
+/* NAVBAR */
+.navbar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+    background: rgba(0,0,0,0.3);
+    backdrop-filter: blur(10px);
+    z-index: 10;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 14px;
 }
 
 /* HERO */
 .hero {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    text-align: center;
-    overflow: hidden;
+    background: url('https://images.unsplash.com/photo-1518770660439-4636190af475') center/cover;
 }
 
-.overlay {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(circle, transparent, rgba(0,0,0,0.4));
-}
-
-.hero-content {
-    position: relative;
-    z-index: 2;
+.hero-text {
+    background: rgba(0,0,0,0.55);
+    padding: 40px;
+    border-radius: 20px;
+    animation: fadeUp 1s ease;
 }
 
 .hero h1 {
     font-size: 48px;
 }
 
-.hero h2 span {
-    color: #ffd700;
-}
-
-.profile-img {
-    width: 160px;
-    height: 160px;
-    border-radius: 50%;
-    margin: 20px 0;
-    border: 4px solid rgba(255,255,255,0.5);
-    object-fit: cover;
-    backdrop-filter: blur(10px);
-}
-
-/* BUTTON */
-.hero-buttons a {
-    display: inline-block;
-    margin: 10px;
-    padding: 12px 22px;
-    border-radius: 25px;
-    background: rgba(255,255,255,0.15);
-    color: white;
-    text-decoration: none;
-    backdrop-filter: blur(10px);
-    transition: 0.3s;
-}
-
-.hero-buttons a:hover {
+/* WHITE SECTION */
+.white {
     background: white;
-    color: #6a0dad;
+    color: #333;
+    flex-direction: column;
 }
 
-/* SECTION */
-.section {
-    padding: 80px 20px;
-    text-align: center;
-}
-
-/* GLASS CARD */
-.glass-card {
-    max-width: 500px;
-    margin: 30px auto;
-    padding: 25px;
-    border-radius: 20px;
-    background: rgba(255,255,255,0.1);
-    backdrop-filter: blur(12px);
-    text-align: left;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-}
-
-.glass-card p {
-    margin: 10px 0;
-}
-
-/* HOBI */
-.hobi-container {
+/* ABOUT */
+.company-card {
+    max-width: 1000px;
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 25px;
-    margin-top: 30px;
+    gap: 30px;
+    align-items: center;
+    margin-top: 20px;
 }
 
-.hobi-card {
-    width: 160px;
+.about-img {
+    width: 200px;
+    border-radius: 20px;
+}
+
+.about-text {
+    text-align: left;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-top: 15px;
+}
+
+/* SERVICES */
+.services {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.service-card {
+    width: 220px;
+    background: white;
+    color: #333;
     border-radius: 20px;
     overflow: hidden;
-    background: rgba(255,255,255,0.1);
-    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
     transition: 0.3s;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
 
-.hobi-card:hover {
-    transform: translateY(-5px) scale(1.05);
+.service-card:hover {
+    transform: translateY(-8px);
 }
 
-.hobi-card img {
+.service-card img {
     width: 100%;
-    height: 120px;
+    height: 130px;
     object-fit: cover;
-}
-
-.hobi-card p {
-    padding: 10px;
 }
 
 /* FOOTER */
 footer {
-    margin-top: 40px;
-    padding: 20px;
-    background: rgba(0,0,0,0.3);
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,0.4);
+}
+
+/* ANIMASI */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
